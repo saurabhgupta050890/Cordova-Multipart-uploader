@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.metacube.metacampus.multipartfileuploader"
+      version="0.0.1">
+
+  <engines>
+    <engine name="cordova" version=">=3.0.0" />
+  </engines>
+
+  <name>MultiPart File Uploader</name>
+  <description>A cordova plugin to upload a multi-part form data with a file attachment. The file is picked from the device and uploaded to server. </description>
+  <keywords>cordova,multi-part,file</keywords>
+  <!--<repo>https://github.com/ti8mag/DocumentHandler.git</repo>-->
+
+  <license>Apache 2.0</license>
+
+  <js-module src="www/MultiPartFileUploader.js" name="MultiPartFileUploader">
+    <clobbers target="window.fileUpload" />
+  </js-module>
+
+  <platform name="android">
+
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="MultiPartFileUploader" >
+				<param name="android-package" value="com.metacube.metacampus.multipartfileuploader.MultiPartFileUploader"/>
+			</feature>
+		</config-file>
+
+    <source-file src="src/android/MultiPartFileUploader.java" target-dir="src/com/metacube/metacampus/multipartfileuploader" />
+    <source-file src="src/android/MultipartUtility.java" target-dir="src/com/metacube/metacampus/multipartfileuploader" />
+
+  </platform>
+
+	<!--<platform name="ios">
+		
+		<config-file target="config.xml" parent="/*">
+			<feature name="DocumentHandler">
+				<param name="ios-package" value="DocumentHandler"/>
+			</feature>
+		</config-file>
+
+    <framework src="QuickLook.framework" />
+
+		<source-file src="src/ios/DocumentHandler.m" />
+
+		<header-file src="src/ios/DocumentHandler.h" />
+
+	</platform>-->
+
+
+</plugin>
