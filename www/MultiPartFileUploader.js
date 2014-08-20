@@ -1,5 +1,5 @@
 var blobuploder = {
-	uploadFileToBlobStore : function(filePath, uploadUrl,successCallback,errorCallback) {
+	uploadFile : function(filePath, uploadUrl,successCallback,errorCallback) {
 		cordova.exec(
 			successCallback,
 			errorCallback,
