@@ -3,7 +3,7 @@ Cordova-Multipart-uploader
 
 ## Description ##
 
-This is a `Cordova plugin` to upload a file from an Android device to server in form of multi-part form data. Many server applications like `Google App Engine Blobstore` requires a `multipart/formdata` reques to upload a file. This plugin picks a file from the device and creates a `multipart/formdata` request with the file as attachment. 
+This is a `Cordova plugin` to upload a file from an Android device to server in form of multi-part form data. Many server applications like `Google App Engine Blobstore` requires a `multipart/formdata` requests to upload a file. This plugin picks a file from the device and creates a `multipart/formdata` request with the file as attachment. 
 
 ## Installation ##
 
